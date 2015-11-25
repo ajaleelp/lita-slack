@@ -36,6 +36,7 @@ Lita.configure do |config|
   config.robot.adapter = :slack
   config.robot.admins = ["U012A3BCD"]
   config.adapters.slack.token = "abcd-1234567890-hWYd21AmMH2UHAkx29vb5c1Y"
+  config.adapters.slack.parse = "full" # See https://api.slack.com/docs/formatting#parsing_modes
 end
 ```
 
@@ -52,7 +53,7 @@ Lita will join your default channel after initial setup. To have it join additio
 
 ## Chat service API
 
-lita-slack supports Lita 4.6's chat service API for Slack-specific functionality. You can access this API object by calling the `Lita::Robot#chat_service`. See the API docs for `Lita::Slack::Adapters::ChatService` for details about the provided methods.
+lita-slack supports Lita 4.6's chat service API for Slack-specific functionality. You can access this API object by calling the `Lita::Robot#chat_service`. See the API docs for `Lita::Adapters::Slack::ChatService` for details about the provided methods.
 
 ## API documentation
 
